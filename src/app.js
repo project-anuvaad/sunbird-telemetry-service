@@ -12,7 +12,7 @@ const createAppServer = () => {
   app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,PATCH,DELETE,OPTIONS')
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization,' + 'cid, user-id, x-auth, Cache-Control, X-Requested-With, datatype, *')
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization,' + 'cid, user-id, x-auth, x-app-id, Cache-Control, X-Requested-With, datatype, *')
     if (req.method === 'OPTIONS') res.sendStatus(200)
     else next()
   })
